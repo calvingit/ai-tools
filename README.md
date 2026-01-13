@@ -1,178 +1,225 @@
-# AI 规则 - Flutter 开发规范与最佳实践
+# AI Tools
 
-专为 Flutter 开发者设计的 AI 工具提示词和开发规范集合。本项目旨在通过经过验证的最佳实践，标准化 AI 辅助开发工作流并确保代码质量。
+Collection of Claude Code skills and MCP (Model Context Protocol) servers configuration for enhanced development experience.
 
-## 🎯 项目目的
+## Overview
 
-本仓库记录并整理了在使用 Cursor、WindSurf、Trae 等 AI 开发工具处理 Flutter 项目时的专业提示词、代码规范、设计指南和项目规则。通过建立统一标准，确保 AI 生成的代码遵循最佳实践，最小化回归风险，并提高可维护性。
+This repository contains:
 
-## 📁 项目结构
+- **Skills**: Reusable Claude Code skills for Flutter/Dart development
+- **MCP Servers**: Pre-configured MCP servers for various development tools
+- **Scripts**: Python scripts for easy installation and management
+- **Makefile**: Convenient commands for installation and maintenance
 
-```
-ai-rules/
-├── README.md                    # 项目文档（英文版）
-├── README-zh.md                 # 项目文档（中文版）
-├── flutter-agent-prompt.md      # 高阶AI Agent提示词（上下文工程版）
-├── flutter-chat-complex-prompt.md # 复杂问题专家级提示词
-├── flutter-chat-prompt-simple.md # 简单问题基础提示词
-├── flutter-code-rules.md        # Flutter/Dart代码规范与最佳实践
-├── flutter-design-guidelines.md # Flutter应用设计指南
-├── flutter-project-rule.md      # Flutter项目工程规范
-└── CLAUDE.md                    # Claude专用配置
-```
-
-## 📋 文件说明
-
-### 1. flutter-agent-prompt.md - 高阶 AI Agent 配置
-
-专为具备上下文工程能力的复杂 AI Agent 设计：
-
-- **角色定义**：资深 Flutter 工程师 AI 助手
-- **工作流程**：6 步标准化开发流程
-- **工具策略**：外部化大内容、循环驱动开发
-- **编码准则**：最小侵入性改动、可回滚方案
-- **架构原则**：分层设计、依赖倒置、单一职责
-- **输出模板**：标准化交付格式
-
-### 2. flutter-chat-complex-prompt.md - 复杂问题专家提示词
-
-针对复杂技术挑战的专家级指导：
-
-- **知识领域**：涵盖 Dart 语言特性、状态管理、性能优化等 12 个专业领域
-- **诊断能力**：问题根本原因分析与解决方案策略
-- **架构建议**：项目架构设计和技术选型指导
-- **原理说明**：深入技术原理和权衡考量解释
-
-### 3. flutter-chat-prompt-simple.md - 基础提示词配置
-
-简洁的 Flutter AI 助手配置，适用于：
-
-- 日常开发任务
-- 快速代码生成
-- 基础问题解答
-
-### 4. flutter-code-rules.md - 全面代码规范
-
-完整的 Flutter/Dart 代码规范，包括：
-
-- **命名规范**：类、函数、变量和文件的命名标准
-- **类型系统**：类型注解和泛型使用指南
-- **代码风格**：格式化和结构最佳实践
-- **文档标准**：注释格式和 API 文档要求
-- **测试指南**：单元测试和组件测试原则
-
-### 5. flutter-design-guidelines.md - 设计指南
-
-全面的 Flutter 应用开发指南，定义：
-
-- **技术栈**：Flutter SDK 版本、第三方库选择标准
-- **目录结构**：模块化项目结构示例
-- **架构模式**：Clean Architecture、分层架构实现
-- **开发标准**：从项目初始化到部署的完整工作流
-
-### 6. flutter-project-rule.md - 工程规范
-
-项目级工程规范，确保：
-
-- **版本管理**：Flutter/Dart SDK 版本控制
-- **模块职责**：各层级的清晰职责边界
-- **依赖管理**：第三方库选择和版本控制标准
-- **性能优化**：内存管理和渲染性能最佳实践
-
-## 🚀 使用指南
-
-### 基于场景的选择
-
-| 场景          | 推荐文件                                               | 使用方法                 |
-| ------------- | ------------------------------------------------------ | ------------------------ |
-| 新项目初始化  | flutter-design-guidelines.md + flutter-project-rule.md | 作为项目初始规范         |
-| 日常开发辅助  | flutter-chat-prompt-simple.md                          | 配置为 AI 工具基础提示词 |
-| 复杂问题解决  | flutter-chat-complex-prompt.md                         | 针对具体技术问题咨询     |
-| 代码审查      | flutter-code-rules.md                                  | 作为代码审查标准         |
-| AI Agent 开发 | flutter-agent-prompt.md                                | 配置到自动化 AI Agent    |
-
-### AI 工具集成
-
-#### Cursor 配置
-
-Cursor 支持两种规则配置方式，根据使用场景选择合适的方式：
-
-**方式一：项目特定配置（推荐）**
-创建`.cursor/rules`目录并在其中添加规则文件：
+## Quick Start
 
 ```bash
-# 创建规则目录
-mkdir -p .cursor/rules
+# Install everything (skills + MCP servers)
+make install
 
-# 对于Flutter项目
-cp flutter-chat-prompt-simple.md .cursor/rules/flutter.mdc
+# Or install separately
+make install-skills   # Install skills only
+make install-mcp      # Install MCP servers only
 
-# 对于复杂项目
-cp flutter-agent-prompt.md .cursor/rules/agent.mdc
+# List installed items
+make list
+
+# Show help
+make help
 ```
 
-**方式二：全局配置**
-在 Cursor 设置中配置全局规则：
-1. 打开 Cursor Settings (⌘/Ctrl + ,)
-2. 进入 General > Rules for AI
-3. 粘贴对应的提示词内容
+## Project Structure
 
-**优先级说明**：项目特定的`.cursor/rules/`目录规则优先级高于全局Rules for AI设置。
+```
+ai-tools/
+├── skills/              # Claude Code skills
+│   ├── flutter-dev/    # Flutter & Dart development
+│   ├── swift-concurrency/  # Swift concurrency guidance
+│   └── flutter-firebase/   # Firebase integration for Flutter
+├── mcp/                 # MCP server configurations
+│   ├── claude.json     # Local MCP server config
+│   └── MCP-Servers.md   # MCP server documentation
+├── scripts/             # Python management scripts
+│   ├── skills.py       # Skill installation/management
+│   └── mcp.py          # MCP server installation/management
+├── Makefile            # Convenient commands
+└── README.md           # This file
+```
 
-**注意**：`.cursorrules`文件方式已废弃，请使用新的`.cursor/rules/`目录结构。
+## Skills
 
-#### Trae 配置
+### flutter-dev
+Expert guidance for Flutter and Dart development, including:
+- State management (Bloc, Riverpod, Provider, ChangeNotifier)
+- Testing with Mocktail
+- Navigation with GoRouter
+- Code quality standards
+- Architecture patterns
+- Error handling
 
-在 Trae 项目设置中，将提示词添加到项目规则中。
+### swift-concurrency
+Guidance for Swift Concurrency concepts:
+- async/await
+- Actors
+- MainActor
+- Sendable
+- Isolation domains
 
-#### 其他 AI 工具
+### flutter-firebase
+Firebase integration for Flutter:
+- Authentication
+- Firestore
+- Cloud Functions
+- Messaging
+- Analytics
+- And more...
 
-根据各工具支持的方式进行配置。
+## MCP Servers
 
-## 🎯 核心优势
+Configured MCP servers (see `mcp/MCP-Servers.md` for details):
 
-1. **专业性强**：所有规则基于 Flutter 官方最佳实践和实际项目经验
-2. **层次分明**：从基础到高级，满足不同复杂度项目需求
-3. **实战导向**：每个规范都配有实际应用场景和代码示例
-4. **持续更新**：根据 Flutter 生态发展持续优化
-5. **可定制性**：可根据具体项目需求灵活调整
+| Server | Type | Purpose |
+|--------|------|---------|
+| chrome-devtools | stdio | Browser automation |
+| context7 | stdio | Documentation lookup |
+| dart | stdio | Dart/Flutter dev tools |
+| fetch | stdio | URL fetching |
+| sequential-thinking | stdio | Structured reasoning |
+| filesystem | stdio | File operations |
+| git | stdio | Git operations |
+| memory | stdio | Knowledge graph |
+| time | stdio | Time/timezone |
+| web-reader | HTTP | Web page reading (Zhipu) |
+| web-search-prime | HTTP | Web search (Zhipu) |
+| zai-mcp-server | stdio | Image/video analysis (Zhipu) |
+| zread | HTTP | GitHub repo reading (Zhipu) |
 
-## 📈 最佳实践建议
+## Installation
 
-### 新项目启动流程
+### Using Make (Recommended)
 
-1. 阅读`flutter-design-guidelines.md`了解整体架构
-2. 根据`flutter-project-rule.md`设置项目规范
-3. 配置 AI 工具使用合适的提示词
-4. 开发过程中参考`flutter-code-rules.md`确保代码质量
+```bash
+# Install everything
+make install
 
-### 现有项目优化
+# Install skills only
+make install-skills
 
-1. 使用`flutter-code-rules.md`进行代码审查
-2. 针对具体问题使用`flutter-chat-complex-prompt.md`获取专业建议
-3. 逐步引入规范，避免大范围重构
+# Install MCP servers only
+make install-mcp
 
-## 🤝 贡献指南
+# Force reinstall (override conflicts)
+make reinstall-skills
+make reinstall-mcp
 
-欢迎社区贡献和反馈：
+# Uninstall
+make uninstall
+```
 
-- 提交 Issue 讨论规范改进
-- 分享实际项目中的最佳实践
-- 提出新的规范建议
+### Using Python Scripts Directly
 
-## 📄 许可证
+```bash
+# Skills
+python3 scripts/skills.py install
+python3 scripts/skills.py uninstall
+python3 scripts/skills.py list
 
-本项目采用 MIT 许可证，可自由使用和修改。
+# MCP Servers
+python3 scripts/mcp.py install
+python3 scripts/mcp.py install --dry-run    # Preview changes
+python3 scripts/mcp.py install -f          # Force reinstall
+python3 scripts/mcp.py uninstall
+python3 scripts/mcp.py list
+python3 scripts/mcp.py diff                # Show differences
+python3 scripts/mcp.py backups             # List backups
+python3 scripts/mcp.py restore <backup>    # Restore from backup
+```
 
-## 🌏 国际化
+## MCP Server Management
 
-- [English Version](README.md)
-- [中文版](README-zh.md)
+### Automatic Backup
 
-## 📞 联系与支持
+Before installing or uninstalling MCP servers, the script automatically creates a backup of `~/.claude.json`.
 
-如有问题或建议，欢迎通过以下方式联系：
+- Backups are stored in: `~/.claude.json.backup/`
+- Keeps the most recent 10 backups
+- Format: `claude.json.YYYYMMDD_HHMMSS`
 
-- 提交 GitHub Issue
-- 参与讨论和改进
-- 分享您的使用经验
+### Backup Commands
+
+```bash
+# List all backups
+make backups
+# or
+python3 scripts/mcp.py backups
+
+# Restore from backup
+make restore BACKUP=claude.json.20250113_123456
+# or
+python3 scripts/mcp.py restore claude.json.20250113_123456
+```
+
+### Conflict Detection
+
+The MCP installation script checks for conflicts before modifying `~/.claude.json`:
+
+- **Already exists with same config**: Skipped
+- **Already exists with different config**: Skipped (use `-f` to override)
+- **Not installed**: Added
+
+```bash
+# Check for conflicts without installing
+make diff
+# or
+python3 scripts/mcp.py diff
+```
+
+## Makefile Commands
+
+| Command | Description |
+|---------|-------------|
+| `make install` | Install everything |
+| `make install-skills` | Install skills only |
+| `make install-mcp` | Install MCP servers only |
+| `make uninstall` | Uninstall everything |
+| `make list` | List all installed items |
+| `make list-skills` | List skills |
+| `make list-mcp` | List MCP servers |
+| `make diff` | Show MCP config differences |
+| `make backups` | List MCP backups |
+| `make dry-run-mcp` | Preview MCP installation |
+| `make reinstall-skills` | Force reinstall skills |
+| `make reinstall-mcp` | Force reinstall MCP servers |
+| `make restore BACKUP=...` | Restore from backup |
+| `make help` | Show all commands |
+
+## Configuration Files
+
+### Skills Location
+
+Skills are symlinked to `~/.claude/skills/`:
+
+```bash
+~/.claude/skills/
+├── flutter-dev -> /path/to/ai-tools/skills/flutter-dev
+├── swift-concurrency -> /path/to/ai-tools/skills/swift-concurrency
+└── flutter-firebase -> /path/to/ai-tools/skills/flutter-firebase
+```
+
+### MCP Configuration
+
+MCP servers are merged into `~/.claude.json` from `mcp/claude.json`.
+
+**Note 1**: Zhipu AI services require API key configuration. Put `Z_AI_API_KEY` in your environment variables.
+
+**Note 2**: Context7 services do not require API key configuration. But if you want get more quick response, you can put `CONTEXT7_API_KEY` in your environment variables.
+
+## Requirements
+
+- Python 3.x
+- Claude Code CLI
+- Make (optional, for Makefile commands)
+
+## License
+
+MIT
