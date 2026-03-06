@@ -145,19 +145,32 @@ def find_skill_source_dir(repo_dir: Path, skill_name: str) -> Path | None:
     在仓库中查找 Skill 的源文件目录。
 
     查找策略：
-    1. 查找 repo/skills/{skill_name} 目录。
-    2. 如果不存在，查找 repo/SKILL.md（单 Skill 仓库模式）。
+    1. 优先查找 repo/skills/{skill_name} 目录。
+    2. 若存在 skills 目录但无同名子目录，则返回整个 skills 目录（组合包模式）。
+    3. 若不存在 skills 目录，查找 repo/SKILL.md（单 Skill 仓库模式）。
        如果是单 Skill 仓库，会创建一个临时目录包含该 SKILL.md。
     """
-    # 策略 1: 标准 skills 目录结构
-    for skills_dir in repo_dir.rglob("skills"):
-        if not skills_dir.is_dir():
-            continue
+    root_skills_dir = repo_dir / "skills"
+    skills_dirs: list[Path] = []
+    if root_skills_dir.is_dir():
+        skills_dirs.append(root_skills_dir)
+
+    nested_skills_dirs = [
+        path
+        for path in repo_dir.rglob("skills")
+        if path.is_dir() and path != root_skills_dir
+    ]
+    nested_skills_dirs.sort(key=lambda p: (len(p.relative_to(repo_dir).parts), str(p)))
+    skills_dirs.extend(nested_skills_dirs)
+
+    for skills_dir in skills_dirs:
         candidate = skills_dir / skill_name
         if candidate.is_dir():
             return candidate
 
-    # 策略 2: 根目录 SKILL.md (单 Skill 仓库)
+    if skills_dirs:
+        return skills_dirs[0]
+
     root_skill_md = repo_dir / "SKILL.md"
     if root_skill_md.is_file():
         temp_skill_dir = CACHE_DIR / f"__skill_temp_{skill_name}"
@@ -170,16 +183,42 @@ def find_skill_source_dir(repo_dir: Path, skill_name: str) -> Path | None:
     return None
 
 
-def copy_skill_to_target(skill_name: str, source_dir: Path) -> None:
+def copy_skill_to_target(skill_name: str, source_dir: Path, repo_root: Path) -> None:
     """
     将 Skill 安装到目标目录。
     会完全替换目标目录中的同名 Skill。
+
+    Args:
+        skill_name: 技能名称
+        source_dir: 技能源文件目录
+        repo_root: 仓库根目录 (用于判断是否是整包复制)
     """
-    destination = TARGET_SKILLS_DIR / skill_name
+    # 如果源目录名就是 "skills"，说明是一个技能包的根 skills 目录
+    is_skills_dir = source_dir.name == "skills"
+
+    if is_skills_dir:
+        # 技能组合包：直接放在项目根目录
+        destination = ROOT_DIR / skill_name
+    else:
+        # 单个技能：放在 skills/ 目录下
+        destination = TARGET_SKILLS_DIR / skill_name
+
     if destination.exists():
         shutil.rmtree(destination)
-    TARGET_SKILLS_DIR.mkdir(parents=True, exist_ok=True)
-    shutil.copytree(source_dir, destination)
+
+    # 确保父目录存在
+    destination.parent.mkdir(parents=True, exist_ok=True)
+
+    # 技能包不需要特殊过滤，因为我们只复制了 skills 目录下的内容，
+    # 通常这个目录下只包含具体的技能文件夹，不会有 .git 等元数据。
+    # 如果 skills 目录下还有非技能文件（如 .DS_Store），shutil.copytree 也可以带 ignore。
+    ignore = shutil.ignore_patterns(
+        ".DS_Store",
+        "__pycache__",
+        "*.pyc",
+    )
+
+    shutil.copytree(source_dir, destination, ignore=ignore)
 
 
 def extract_skills(content: str) -> dict[str, dict[str, str]]:
@@ -299,7 +338,7 @@ def install_skills(skills: dict[str, dict[str, str]]) -> None:
         if source_dir is None:
             raise RuntimeError(f"未找到 skill 目录或 SKILL.md: {skill_name} ({repo})")
 
-        copy_skill_to_target(skill_name, source_dir)
+        copy_skill_to_target(skill_name, source_dir, repo_cached_dir[repo])
 
 
 def main() -> None:

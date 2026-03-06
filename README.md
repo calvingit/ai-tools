@@ -1,6 +1,6 @@
 # github-ai-coding-agent-config
 
-AI 编码工具配置集合，包含 Codex、Claude 与 `AGENTS.md` 模板，以及常用 Skills 索引。
+AI 编码工具配置集合，包含 Codex、Claude 与 `AGENTS.md` 模板，以及常用 Skills。
 
 ## 配置
 
@@ -50,7 +50,27 @@ ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 ### 开源 Skills
 
 - 首次使用执行 `uv sync` 初始化 Python 环境
-- 使用 `uv run python ./scripts/update.py` 更新并安装发布技能
+- 使用 `uv run python ./scripts/update.py` 下载并更新技能到本地（支持自动识别 Skills 目录与技能组合包）
+
+**安装到 AI 助手**
+
+```bash
+# 1. 默认安装 (安装 ./skills 目录下的标准技能)
+./scripts/install.sh
+
+# 2. 安装指定技能包 (例如 ./flutter-skills)
+./scripts/install.sh flutter-skills
+
+# 3. 安装所有技能 (./skills 及所有 *-skills 目录)
+./scripts/install.sh all
+```
+
+默认安装位置：
+
+- 源文件：`~/.agents/skills`
+- 软链接：`~/.claude/skills` (供 Claude 使用)
+
+**技能列表**
 
 - [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：创建自定义技能
 - [mcp-builder](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：构建自定义 MCP 技能
@@ -72,6 +92,7 @@ ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 - [agent-browser](https://github.com/vercel-labs/agent-browser/tree/main/skills/agent-browser)：浏览器自动化交互（需安装插件）
 - [browser-use](https://github.com/browser-use/browser-use/tree/main/skills/browser-use)：浏览器自动化执行任务（需安装插件）
 - [humanizer-zh](https://github.com/op7418/humanizer-zh)：AI 写作去痕工具（中文版）
+- [flutter-skills](https://github.com/flutter/skills)：Flutter 开发技能集合
 
 ### Superpowers
 

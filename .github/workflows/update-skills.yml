@@ -29,7 +29,7 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          if git diff --quiet --exit-code -- skills scripts/skills-list.json; then
+          if git diff --quiet --exit-code; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add skills scripts/skills-list.json
+          git add .
           git commit -m "chore: update skills"
 
       - name: Push changes
