@@ -69,7 +69,7 @@
   },
   "agent-browser": {
     "repo": "https://github.com/vercel-labs/agent-browser",
-    "commit": "8f6ad817f10b151b647234882f2a0fef6d2b43d1"
+    "commit": "36c2e06f8963c8be6894a16c30bdedd719bca267"
   },
   "browser-use": {
     "repo": "https://github.com/browser-use/browser-use",
