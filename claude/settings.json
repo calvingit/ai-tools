@@ -1,0 +1,62 @@
+{
+  "API_TIMEOUT_MS": 600000,
+  "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1,
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "Replay you api key",
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:3002",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "z-ai/glm5",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "z-ai/glm5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "z-ai/glm5",
+    "ANTHROPIC_MODEL": "z-ai/glm5",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "includeCoAuthoredBy": false,
+  "language": "Chinese",
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(go:*)",
+      "Write(*)",
+      "Bash(ls:*)",
+      "Bash(git:*)",
+      "Update(*:*)",
+      "Bash(mv:*)",
+      "Bash(echo:*)",
+      "Bash(sed:*)",
+      "Bash(source:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(pkill:*)",
+      "Bash(touch:*)",
+      "Bash(grep:*)",
+      "Bash(deadcode:*)",
+      "Bash(sqlite3:*)",
+      "Bash(curl:*)",
+      "Bash(rg:*)",
+      "Bash(chmod:*)",
+      "Bash(lsof:*)",
+      "Bash(make:*)",
+      "Bash(PORT=:*)",
+      "Bash(find:*)",
+      "Bash(docker:*)",
+      "Bash(poetry:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Update(*)"
+    ],
+    "deny": []
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "command": "/bin/zsh -c 'source ~/.claude/statusline.sh'",
+    "type": "command"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "alwaysThinkingEnabled": true,
+  "teammateMode": "tmux"
+}

@@ -1,0 +1,82 @@
+{
+  "skill-creator": {
+    "repo": "https://github.com/anthropics/skills",
+    "commit": "7029232b9212482c0476da354b83364bd28fab2f"
+  },
+  "mcp-builder": {
+    "repo": "https://github.com/anthropics/skills",
+    "commit": "7029232b9212482c0476da354b83364bd28fab2f"
+  },
+  "xlsx": {
+    "repo": "https://github.com/anthropics/skills",
+    "commit": "7029232b9212482c0476da354b83364bd28fab2f"
+  },
+  "code-simplifier": {
+    "repo": "https://github.com/simonwong/agent-skills",
+    "commit": "667ea2ae7643de1e965b135ef38e2b502c39e462"
+  },
+  "chrome-devtools": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "create-agentsmd": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "create-readme": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "create-specification": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "create-technical-spike": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "editorconfig": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "excalidraw-diagram-generator": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "git-commit": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "refactor": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "sql-optimization": {
+    "repo": "https://github.com/github/awesome-copilot",
+    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+  },
+  "changelog-automation": {
+    "repo": "https://github.com/wshobson/agents",
+    "commit": "ade0c7a211d04fa1354d10359737cace5c6fc5b0"
+  },
+  "read-github": {
+    "repo": "https://github.com/am-will/codex-skills",
+    "commit": "c81091796fba691a18d851b6b435fdc9d4d3722f"
+  },
+  "markdown-url": {
+    "repo": "https://github.com/am-will/codex-skills",
+    "commit": "c81091796fba691a18d851b6b435fdc9d4d3722f"
+  },
+  "agent-browser": {
+    "repo": "https://github.com/vercel-labs/agent-browser",
+    "commit": "8f6ad817f10b151b647234882f2a0fef6d2b43d1"
+  },
+  "browser-use": {
+    "repo": "https://github.com/browser-use/browser-use",
+    "commit": "bf7775dc85e117612e66d8504c28384abecf3b6c"
+  },
+  "humanizer-zh": {
+    "repo": "https://github.com/op7418/humanizer-zh",
+    "commit": "91f3d394db8419c20d67ebe22a96cf8fee0a404b"
+  }
+}

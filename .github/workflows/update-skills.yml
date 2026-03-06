@@ -1,0 +1,48 @@
+name: Update Skills
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run update script
+        run: python scripts/update.py
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git diff --quiet --exit-code -- skills scripts/skills-list.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add skills scripts/skills-list.json
+          git commit -m "chore: update skills"
+
+      - name: Push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: git push origin HEAD:main

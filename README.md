@@ -1,225 +1,97 @@
-# AI Tools
+# github-ai-coding-agent-config
 
-Collection of Claude Code skills and MCP (Model Context Protocol) servers configuration for enhanced development experience.
+AI 编码工具配置集合，包含 Codex、Claude 与 `AGENTS.md` 模板，以及常用 Skills 索引。
 
-## Overview
+## 配置
 
-This repository contains:
+### Codex 配置
 
-- **Skills**: Reusable Claude Code skills for Flutter/Dart development
-- **MCP Servers**: Pre-configured MCP servers for various development tools
-- **Scripts**: Python scripts for easy installation and management
-- **Makefile**: Convenient commands for installation and maintenance
-
-## Quick Start
+- 模板文件：`codex/config.toml`
+- 目标路径：`~/.codex/config.toml`
+- 用途：配置模型、审批策略、sandbox、features、多 Agent 限制等
 
 ```bash
-# Install everything (skills + MCP servers)
-make install
-
-# Or install separately
-make install-skills   # Install skills only
-make install-mcp      # Install MCP servers only
-
-# List installed items
-make list
-
-# Show help
-make help
+mkdir -p ~/.codex
+[ -f ~/.codex/config.toml ] && cp ~/.codex/config.toml ~/.codex/config.toml.bak
+cp ./codex/config.toml ~/.codex/config.toml
 ```
 
-## Project Structure
+### Claude 配置
 
+- 模板文件：`claude/settings.json`
+- 目标路径：`~/.claude/settings.json`
+- 用途：配置模型、审批策略、sandbox、features、多 Agent 限制等
+
+```bash
+mkdir -p ~/.claude
+[ -f ~/.claude/settings.json ] && cp ~/.claude/settings.json ~/.claude/settings.json.bak
+cp ./claude/settings.json ~/.claude/settings.json
 ```
-ai-tools/
-├── skills/              # Claude Code skills
-│   ├── flutter-dev/    # Flutter & Dart development
-│   ├── swift-concurrency/  # Swift concurrency guidance
-│   └── flutter-firebase/   # Firebase integration for Flutter
-├── mcp/                 # MCP server configurations
-│   ├── claude.json     # Local MCP server config
-│   └── MCP-Servers.md   # MCP server documentation
-├── scripts/             # Python management scripts
-│   ├── skills.py       # Skill installation/management
-│   └── mcp.py          # MCP server installation/management
-├── Makefile            # Convenient commands
-└── README.md           # This file
+
+### `AGENTS.md`
+
+- 模板文件：`codex/AGENTS.md`
+- 推荐路径：`~/.agents/AGENTS.md`（作为主文件）
+- 联动方式：将 `~/.codex/AGENTS.md` 软链接到主文件，避免多份配置漂移
+
+```bash
+mkdir -p ~/.agents ~/.codex
+cp ./codex/AGENTS.md ~/.agents/AGENTS.md
+rm -f ~/.codex/AGENTS.md
+ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 ```
 
 ## Skills
 
-### flutter-dev
-Expert guidance for Flutter and Dart development, including:
-- State management (Bloc, Riverpod, Provider, ChangeNotifier)
-- Testing with Mocktail
-- Navigation with GoRouter
-- Code quality standards
-- Architecture patterns
-- Error handling
+### 我的 Skills
 
-### swift-concurrency
-Guidance for Swift Concurrency concepts:
-- async/await
-- Actors
-- MainActor
-- Sendable
-- Isolation domains
+- `lint-agents-md`：评估 `AGENTS.md` 质量，并自动检测常见设计错误与重写建议
 
-### flutter-firebase
-Firebase integration for Flutter:
-- Authentication
-- Firestore
-- Cloud Functions
-- Messaging
-- Analytics
-- And more...
+### 开源 Skills
 
-## MCP Servers
+- 首次使用执行 `uv sync` 初始化 Python 环境
+- 使用 `uv run python ./scripts/update.py` 更新并安装发布技能
 
-Configured MCP servers (see `mcp/MCP-Servers.md` for details):
+- [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：创建自定义技能
+- [mcp-builder](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：构建自定义 MCP 技能
+- [xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx)：与 Excel 文件交互
+- [code-simplifier](https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier)：简化代码，提高可读性
+- [chrome-devtools](https://github.com/github/awesome-copilot/tree/main/skills/chrome-devtools)：与 Chrome DevTools MCP 交互
+- [create-agentsmd](https://github.com/github/awesome-copilot/tree/main/skills/create-agentsmd)：创建 `AGENTS.md` 文件
+- [create-readme](https://github.com/github/awesome-copilot/tree/main/skills/create-readme)：创建 `README.md` 文件
+- [create-specification](https://github.com/github/awesome-copilot/tree/main/skills/create-specification)：创建规范文档（保存到 `spec/`，命名格式 `spec-[a-z0-9-]+.md`）
+- [create-technical-spike](https://github.com/github/awesome-copilot/tree/main/skills/create-technical-spike)：创建技术探索文档
+- [editorconfig](https://github.com/github/awesome-copilot/tree/main/skills/editorconfig)：生成符合最佳实践的 `.editorconfig`
+- [excalidraw-diagram-generator](https://github.com/github/awesome-copilot/tree/main/skills/excalidraw-diagram-generator)：基于描述生成 Excalidraw 图表
+- [git-commit](https://github.com/github/awesome-copilot/tree/main/skills/git-commit)：基于 Conventional Commits 生成标准提交
+- [refactor](https://github.com/github/awesome-copilot/tree/main/skills/refactor)：在保持行为不变前提下重构代码
+- [sql-optimization](https://github.com/github/awesome-copilot/tree/main/skills/sql-optimization)：优化 SQL 查询性能
+- [changelog-automation](https://github.com/wshobson/agents/tree/main/plugins/documentation-generation/skills/changelog-automation)：基于提交历史和标签自动生成变更日志
+- [read-github](https://github.com/am-will/codex-skills/tree/main/skills/read-github)：通过 gitmcp.io MCP 服务访问 GitHub 仓库文档和代码
+- [markdown-url](https://github.com/am-will/codex-skills/tree/main/skills/markdown-url)：在 URL 前添加前缀，通过 markdown.new 浏览网站
+- [agent-browser](https://github.com/vercel-labs/agent-browser/tree/main/skills/agent-browser)：浏览器自动化交互（需安装插件）
+- [browser-use](https://github.com/browser-use/browser-use/tree/main/skills/browser-use)：浏览器自动化执行任务（需安装插件）
+- [humanizer-zh](https://github.com/op7418/humanizer-zh)：AI 写作去痕工具（中文版）
 
-| Server | Type | Purpose |
-|--------|------|---------|
-| chrome-devtools | stdio | Browser automation |
-| context7 | stdio | Documentation lookup |
-| dart | stdio | Dart/Flutter dev tools |
-| fetch | stdio | URL fetching |
-| sequential-thinking | stdio | Structured reasoning |
-| filesystem | stdio | File operations |
-| git | stdio | Git operations |
-| memory | stdio | Knowledge graph |
-| time | stdio | Time/timezone |
-| web-reader | HTTP | Web page reading (Zhipu) |
-| web-search-prime | HTTP | Web search (Zhipu) |
-| zai-mcp-server | stdio | Image/video analysis (Zhipu) |
-| zread | HTTP | GitHub repo reading (Zhipu) |
+### Superpowers
 
-## Installation
+[Superpowers](https://github.com/obra/superpowers) 是一组完整开发技能集合，建议整体安装，不要单独拆分安装。
 
-### Using Make (Recommended)
+**Claude Code 安装**
 
 ```bash
-# Install everything
-make install
-
-# Install skills only
-make install-skills
-
-# Install MCP servers only
-make install-mcp
-
-# Force reinstall (override conflicts)
-make reinstall-skills
-make reinstall-mcp
-
-# Uninstall
-make uninstall
+/plugin marketplace add obra/superpowers-marketplace
+/plugin install superpowers@superpowers-marketplace
 ```
 
-### Using Python Scripts Directly
+**Codex 安装**
+
+将下面这句话直接发送给 Codex：
 
 ```bash
-# Skills
-python3 scripts/skills.py install
-python3 scripts/skills.py uninstall
-python3 scripts/skills.py list
-
-# MCP Servers
-python3 scripts/mcp.py install
-python3 scripts/mcp.py install --dry-run    # Preview changes
-python3 scripts/mcp.py install -f          # Force reinstall
-python3 scripts/mcp.py uninstall
-python3 scripts/mcp.py list
-python3 scripts/mcp.py diff                # Show differences
-python3 scripts/mcp.py backups             # List backups
-python3 scripts/mcp.py restore <backup>    # Restore from backup
+Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.codex/INSTALL.md
 ```
-
-## MCP Server Management
-
-### Automatic Backup
-
-Before installing or uninstalling MCP servers, the script automatically creates a backup of `~/.claude.json`.
-
-- Backups are stored in: `~/.claude.json.backup/`
-- Keeps the most recent 10 backups
-- Format: `claude.json.YYYYMMDD_HHMMSS`
-
-### Backup Commands
-
-```bash
-# List all backups
-make backups
-# or
-python3 scripts/mcp.py backups
-
-# Restore from backup
-make restore BACKUP=claude.json.20250113_123456
-# or
-python3 scripts/mcp.py restore claude.json.20250113_123456
-```
-
-### Conflict Detection
-
-The MCP installation script checks for conflicts before modifying `~/.claude.json`:
-
-- **Already exists with same config**: Skipped
-- **Already exists with different config**: Skipped (use `-f` to override)
-- **Not installed**: Added
-
-```bash
-# Check for conflicts without installing
-make diff
-# or
-python3 scripts/mcp.py diff
-```
-
-## Makefile Commands
-
-| Command | Description |
-|---------|-------------|
-| `make install` | Install everything |
-| `make install-skills` | Install skills only |
-| `make install-mcp` | Install MCP servers only |
-| `make uninstall` | Uninstall everything |
-| `make list` | List all installed items |
-| `make list-skills` | List skills |
-| `make list-mcp` | List MCP servers |
-| `make diff` | Show MCP config differences |
-| `make backups` | List MCP backups |
-| `make dry-run-mcp` | Preview MCP installation |
-| `make reinstall-skills` | Force reinstall skills |
-| `make reinstall-mcp` | Force reinstall MCP servers |
-| `make restore BACKUP=...` | Restore from backup |
-| `make help` | Show all commands |
-
-## Configuration Files
-
-### Skills Location
-
-Skills are symlinked to `~/.claude/skills/`:
-
-```bash
-~/.claude/skills/
-├── flutter-dev -> /path/to/ai-tools/skills/flutter-dev
-├── swift-concurrency -> /path/to/ai-tools/skills/swift-concurrency
-└── flutter-firebase -> /path/to/ai-tools/skills/flutter-firebase
-```
-
-### MCP Configuration
-
-MCP servers are merged into `~/.claude.json` from `mcp/claude.json`.
-
-**Note 1**: Zhipu AI services require API key configuration. Put `Z_AI_API_KEY` in your environment variables.
-
-**Note 2**: Context7 services do not require API key configuration. But if you want get more quick response, you can put `CONTEXT7_API_KEY` in your environment variables.
-
-## Requirements
-
-- Python 3.x
-- Claude Code CLI
-- Make (optional, for Makefile commands)
 
 ## License
 
-MIT
+本项目采用 [MIT License](./LICENSE)。

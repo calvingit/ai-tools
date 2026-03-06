@@ -1,0 +1,122 @@
+# =========================================================
+# Codex 本地开发高效版（精简）
+# 说明：
+# - 保留高频、有效、非默认的配置
+# - 开启多 Agent
+# - 开启大部分当前文档中可用且实用的功能
+# - 删除过时别名、无效键、以及默认即可的配置
+# =========================================================
+
+# 主模型
+model = "gpt-5.3-codex"
+
+# 交互风格：务实
+personality = "pragmatic"
+
+# 本地开发建议：
+# - 推理强度不要拉满，否则响应会更慢
+# - medium 一般更均衡；复杂任务可临时切到 high/xhigh
+model_reasoning_effort = "medium"
+
+# 推理摘要保留自动，减少额外输出干扰
+model_reasoning_summary = "auto"
+
+# 输出细节适当提高，便于看修改说明和执行结果
+model_verbosity = "high"
+
+# 需要最新资料时直接拉实时网页
+web_search = "live"
+
+# 本地开发常用：允许工作区写入，必要时再弹审批
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+# VS Code 点击引用跳转
+file_opener = "vscode"
+
+# 隐藏实验功能告警（因为下面会启用一些实验项）
+suppress_unstable_features_warning = true
+disable_response_storage = true
+experimental_use_rmcp_client = true
+
+# 不隐藏推理事件；便于观察 agent 行为
+hide_agent_reasoning = false
+show_raw_agent_reasoning = false
+
+# 如无 AGENTS.md，可额外尝试这些文件名
+project_doc_fallback_filenames = ["CLAUDE.md"]
+
+# 仅在 workspace-write 下生效
+[sandbox_workspace_write]
+# 允许联网，便于安装依赖、拉文档、执行常见开发命令
+network_access = true
+
+# =========================================================
+# 历史记录
+# =========================================================
+[history]
+# 保留会话历史，便于追溯
+persistence = "save-all"
+
+# =========================================================
+# 终端界面
+# =========================================================
+[tui]
+# 开启通知，任务结束时更容易感知
+notifications = true
+
+# 保留动画（你若更在意速度体感，可改成 false）
+animations = true
+
+# 保留提示信息
+show_tooltips = true
+
+# =========================================================
+# 功能开关
+# 只显式写“值得手动打开”的项；
+# 那些本来就是默认开启的 stable 项，不重复写
+# =========================================================
+[features]
+# 多 Agent
+multi_agent = true
+
+# 统一执行后端（当前推荐写法，替代旧 experimental_use_unified_exec_tool）
+unified_exec = true
+
+# 允许自由格式 apply_patch
+apply_patch_freeform = true
+
+# 连接器 / Apps 支持（如果你会用到 ChatGPT Apps / connectors，建议开）
+# apps = true
+
+# Apps 走新的 MCP gateway
+apps_mcp_gateway = true
+
+# 即使没有 AGENTS.md，也补充子 Agent 的 AGENTS 作用域说明
+child_agents_md = true
+
+# 运行时指标摘要，便于看每轮执行情况
+runtime_metrics = true
+
+# 为 Apps 做工具发现增强
+search_tool = true
+
+# 加速重复 shell 命令执行
+shell_snapshot = true
+
+# 预刷新远端模型列表，减少模型可用性信息滞后
+remote_models = true
+
+# Linux 下若你在 Linux 原生环境运行，可启用更现代的 sandbox 管线
+# 如果你主要在 macOS，可删除这一行
+# use_linux_sandbox_bwrap = true
+
+# =========================================================
+# 多 Agent 限制
+# =========================================================
+[agents]
+# 本地机更稳妥的高效值建议 6
+max_threads = 6
+
+# 保持 1，避免子 Agent 再递归拉子 Agent，降低上下文污染和资源占用
+max_depth = 1
