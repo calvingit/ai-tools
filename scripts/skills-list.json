@@ -17,43 +17,43 @@
   },
   "chrome-devtools": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "create-agentsmd": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "create-readme": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "create-specification": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "create-technical-spike": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "editorconfig": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "excalidraw-diagram-generator": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "git-commit": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "refactor": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "sql-optimization": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "1fbde58407f6c7ccdb59d0381ad7d36a93d910c4"
+    "commit": "34da22a1cbb4dbbff07b51142af7416f3a1f7771"
   },
   "changelog-automation": {
     "repo": "https://github.com/wshobson/agents",
