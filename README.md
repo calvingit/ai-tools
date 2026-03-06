@@ -1,6 +1,6 @@
-# github-ai-coding-agent-config
+# AI Tools Configuration & Skills
 
-AI 编码工具配置集合，包含 Codex、Claude 与 `AGENTS.md` 模板，以及常用 Skills。
+AI 编码助手配置与技能库，包含 Codex、Claude 的最佳实践配置、`AGENTS.md` 模板，以及可自动化管理的开源 Skills 集合。
 
 ## 配置
 
