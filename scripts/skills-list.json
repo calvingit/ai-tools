@@ -1,15 +1,15 @@
 {
   "skill-creator": {
     "repo": "https://github.com/anthropics/skills",
-    "commit": "7029232b9212482c0476da354b83364bd28fab2f"
+    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c"
   },
   "mcp-builder": {
     "repo": "https://github.com/anthropics/skills",
-    "commit": "7029232b9212482c0476da354b83364bd28fab2f"
+    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c"
   },
   "xlsx": {
     "repo": "https://github.com/anthropics/skills",
-    "commit": "7029232b9212482c0476da354b83364bd28fab2f"
+    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c"
   },
   "code-simplifier": {
     "repo": "https://github.com/simonwong/agent-skills",
@@ -17,43 +17,43 @@
   },
   "chrome-devtools": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-agentsmd": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-readme": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-specification": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-technical-spike": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "editorconfig": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "excalidraw-diagram-generator": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "git-commit": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "refactor": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "sql-optimization": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "4ffdde1f6128443c7dab6662f9c184be44fab938"
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "changelog-automation": {
     "repo": "https://github.com/wshobson/agents",
@@ -69,11 +69,11 @@
   },
   "agent-browser": {
     "repo": "https://github.com/vercel-labs/agent-browser",
-    "commit": "36c2e06f8963c8be6894a16c30bdedd719bca267"
+    "commit": "aba2353112ea0eea9bce7791fa05b6532d098c0c"
   },
   "browser-use": {
     "repo": "https://github.com/browser-use/browser-use",
-    "commit": "bf7775dc85e117612e66d8504c28384abecf3b6c"
+    "commit": "7a2f5540389d4ef453d3867e377949ed245df3a4"
   },
   "humanizer-zh": {
     "repo": "https://github.com/op7418/humanizer-zh",
