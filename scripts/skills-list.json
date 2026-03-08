@@ -57,7 +57,7 @@
   },
   "changelog-automation": {
     "repo": "https://github.com/wshobson/agents",
-    "commit": "ade0c7a211d04fa1354d10359737cace5c6fc5b0"
+    "commit": "a6f0f457c4e41cbb0ad329b691d28e255a829210"
   },
   "read-github": {
     "repo": "https://github.com/am-will/codex-skills",
@@ -69,11 +69,11 @@
   },
   "agent-browser": {
     "repo": "https://github.com/vercel-labs/agent-browser",
-    "commit": "aba2353112ea0eea9bce7791fa05b6532d098c0c"
+    "commit": "d9387aae58fbc778b5cacc43ba3d07256f0f9d07"
   },
   "browser-use": {
     "repo": "https://github.com/browser-use/browser-use",
-    "commit": "7a2f5540389d4ef453d3867e377949ed245df3a4"
+    "commit": "9b103bb1d469e49cfcff9edd007c4ff16d8577e0"
   },
   "humanizer-zh": {
     "repo": "https://github.com/op7418/humanizer-zh",
