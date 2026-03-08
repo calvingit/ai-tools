@@ -1,0 +1,229 @@
+{
+  "categories": [
+    {
+      "name": "Tool",
+      "items": [
+        {
+          "id": "skill-creator",
+          "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+          "desc": "创建自定义技能"
+        },
+        {
+          "id": "mcp-builder",
+          "url": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+          "desc": "构建自定义 MCP 技能"
+        },
+        {
+          "id": "xlsx",
+          "url": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+          "desc": "与 Excel 文件交互"
+        },
+        {
+          "id": "code-simplifier",
+          "url": "https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier",
+          "desc": "简化代码，提高可读性"
+        },
+        {
+          "id": "editorconfig",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/editorconfig",
+          "desc": "生成符合最佳实践的 `.editorconfig`"
+        },
+        {
+          "id": "git-commit",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/git-commit",
+          "desc": "基于 Conventional Commits 生成标准提交"
+        },
+        {
+          "id": "refactor",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/refactor",
+          "desc": "在保持行为不变前提下重构代码"
+        },
+        {
+          "id": "read-github",
+          "url": "https://github.com/am-will/codex-skills/tree/main/skills/read-github",
+          "desc": "通过 gitmcp.io MCP 服务访问 GitHub 仓库文档和代码"
+        },
+        {
+          "id": "markdown-url",
+          "url": "https://github.com/am-will/codex-skills/tree/main/skills/markdown-url",
+          "desc": "在 URL 前添加前缀，通过 markdown.new 浏览网站"
+        },
+        {
+          "id": "agent-browser",
+          "url": "https://github.com/vercel-labs/agent-browser/tree/main/skills/agent-browser",
+          "desc": "浏览器自动化交互（需安装插件）"
+        },
+        {
+          "id": "browser-use",
+          "url": "https://github.com/browser-use/browser-use/tree/main/skills/browser-use",
+          "desc": "浏览器自动化执行任务（需安装插件）"
+        },
+        {
+          "id": "humanizer-zh",
+          "url": "https://github.com/op7418/humanizer-zh",
+          "desc": "AI 写作去痕工具（中文版）"
+        },
+        {
+          "id": "find-skills",
+          "url": "https://github.com/vercel-labs/skills/tree/main/skills/find-skills",
+          "desc": "查找技能集合"
+        }
+      ]
+    },
+    {
+      "name": "Documentation",
+      "items": [
+        {
+          "id": "create-agentsmd",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/create-agentsmd",
+          "desc": "创建 `AGENTS.md` 文件"
+        },
+        {
+          "id": "create-readme",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/create-readme",
+          "desc": "创建 `README.md` 文件"
+        },
+        {
+          "id": "create-specification",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/create-specification",
+          "desc": "创建规范文档（保存到 `spec/`，命名格式 `spec-[a-z0-9-]+.md`）"
+        },
+        {
+          "id": "create-technical-spike",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/create-technical-spike",
+          "desc": "创建技术探索文档"
+        },
+        {
+          "id": "changelog-automation",
+          "url": "https://github.com/wshobson/agents/tree/main/plugins/documentation-generation/skills/changelog-automation",
+          "desc": "基于提交历史和标签自动生成变更日志"
+        }
+      ]
+    },
+    {
+      "name": "Flutter",
+      "items": [
+        {
+          "id": "flutter-skills",
+          "url": "https://github.com/flutter/skills",
+          "desc": "Flutter 开发技能集合"
+        }
+      ]
+    },
+    {
+      "name": "React",
+      "items": [
+        {
+          "id": "composition-patterns",
+          "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns",
+          "desc": "React 组合模式技能集合"
+        },
+        {
+          "id": "react-best-practices",
+          "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
+          "desc": "React 最佳实践技能集合"
+        }
+      ]
+    },
+    {
+      "name": "React Native",
+      "items": [
+        {
+          "id": "react-native-skills",
+          "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills",
+          "desc": "React Native 开发技能集合"
+        }
+      ]
+    },
+    {
+      "name": "Vue",
+      "items": [
+        {
+          "id": "vue-skills",
+          "url": "https://github.com/vuejs-ai/skills",
+          "desc": "Vue 开发技能集合"
+        },
+        {
+          "id": "vueuse-functions",
+          "url": "https://github.com/vueuse/skills/tree/main/skills/vueuse-functions",
+          "desc": "VueUse 开发技能集合"
+        }
+      ]
+    },
+    {
+      "name": "Web",
+      "items": [
+        {
+          "id": "chrome-devtools",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/chrome-devtools",
+          "desc": "与 Chrome DevTools MCP 交互"
+        },
+        {
+          "id": "next-skills",
+          "url": "https://github.com/vercel-labs/next-skills",
+          "desc": "Next.js 开发技能集合"
+        },
+        {
+          "id": "nuxt",
+          "url": "https://github.com/antfu/skills/tree/main/skills/nuxt",
+          "desc": "Nuxt.js 开发技能集合"
+        }
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        {
+          "id": "sql-optimization",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/sql-optimization",
+          "desc": "优化 SQL 查询性能"
+        }
+      ]
+    },
+    {
+      "name": "DevOps",
+      "items": [
+        {
+          "id": "deploy-to-vercel",
+          "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel",
+          "desc": "部署到 Vercel 技能集合"
+        },
+        {
+          "id": "turborepo",
+          "url": "https://github.com/vercel/turborepo/tree/main/skills/turborepo",
+          "desc": "Turborepo 开发技能集合"
+        },
+        {
+          "id": "pnpm",
+          "url": "https://github.com/antfu/skills/tree/main/skills/pnpm",
+          "desc": "pnpm 开发技能集合"
+        }
+      ]
+    },
+    {
+      "name": "Testing",
+      "items": [
+        {
+          "id": "vitest",
+          "url": "https://github.com/antfu/skills/tree/main/skills/vitest",
+          "desc": "Vitest 开发技能集合"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "items": [
+        {
+          "id": "excalidraw-diagram-generator",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/excalidraw-diagram-generator",
+          "desc": "基于描述生成 Excalidraw 图表"
+        },
+        {
+          "id": "web-design-guidelines",
+          "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
+          "desc": "Web 设计 Guideline 技能集合"
+        }
+      ]
+    }
+  ]
+}

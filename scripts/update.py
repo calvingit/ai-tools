@@ -12,7 +12,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-README_PATH = ROOT_DIR / "README.md"
+INDEX_PATH = ROOT_DIR / "index.json"
 OUTPUT_PATH = ROOT_DIR / "scripts" / "skills-list.json"
 CACHE_DIR = ROOT_DIR / ".cache"
 TARGET_SKILLS_DIR = ROOT_DIR / "skills"
@@ -224,29 +224,51 @@ def cleanup_cache_dirs(valid_cache_dir_names: set[str]) -> None:
             shutil.rmtree(entry)
 
 
-def extract_skills(content: str) -> dict[str, dict[str, str]]:
-    section_match = re.search(
-        r"###\s*开源 Skills\s*(.*?)(?:\n###\s+|\Z)",
-        content,
-        flags=re.S,
-    )
-    skills: dict[str, dict[str, str]] = {}
-    if not section_match:
-        return skills
+def load_index_skills(path: Path) -> dict[str, dict[str, str]]:
+    if not path.exists():
+        raise FileNotFoundError(f"未找到技能索引文件: {path}")
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    categories = raw.get("categories", [])
+    if not isinstance(categories, list):
+        raise ValueError("技能索引格式错误: categories 应为数组")
 
-    section_text = section_match.group(1)
-    for name, url in re.findall(
-        r"-\s*\[([^\]]+)\]\((https?://[^)]+)\)",
-        section_text,
-    ):
-        parsed = parse_github_url(url)
-        skills[name.strip()] = {
-            "repo": parsed["repo_url"],
-            "path": parsed["path"],
-            "commit": "",
-            "lastUpdate": "",
-            "lastCommitId": "",
-        }
+    skills: dict[str, dict[str, str]] = {}
+    errors: list[str] = []
+    for category in categories:
+        if not isinstance(category, dict):
+            errors.append("技能索引格式错误: category 应为对象")
+            continue
+        items = category.get("items", [])
+        if not isinstance(items, list):
+            errors.append("技能索引格式错误: category.items 应为数组")
+            continue
+        for item in items:
+            if not isinstance(item, dict):
+                errors.append("技能索引格式错误: item 应为对象")
+                continue
+            name = str(item.get("id", "")).strip()
+            url = str(item.get("url", "")).strip()
+            if not name or not url:
+                errors.append("技能索引格式错误: item.id 或 item.url 为空")
+                continue
+            if name in skills:
+                errors.append(f"技能索引格式错误: 重复的技能 id {name}")
+                continue
+            try:
+                parsed = parse_github_url(url)
+            except ValueError as exc:
+                errors.append(str(exc))
+                continue
+            skills[name] = {
+                "repo": parsed["repo_url"],
+                "path": parsed["path"],
+                "commit": "",
+                "lastUpdate": "",
+                "lastCommitId": "",
+            }
+
+    if errors:
+        raise ValueError("\n".join(errors))
     return skills
 
 
@@ -369,8 +391,7 @@ def main() -> None:
         format="%(asctime)s [%(levelname)s] %(message)s",
     )
     try:
-        content = README_PATH.read_text(encoding="utf-8")
-        extracted_skills = extract_skills(content)
+        extracted_skills = load_index_skills(INDEX_PATH)
         existing_skills = load_existing_skills(OUTPUT_PATH)
         skills = merge_skills(extracted_skills, existing_skills)
         valid_cache_names = {
