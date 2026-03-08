@@ -1,86 +1,240 @@
 {
   "skill-creator": {
     "repo": "https://github.com/anthropics/skills",
-    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c"
+    "path": "skills/skill-creator",
+    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c",
+    "lastUpdate": "2026-03-07 04:06:23",
+    "lastCommitId": "b0cbd3df1533b396d281a6886d5132f623393a9c"
   },
   "mcp-builder": {
     "repo": "https://github.com/anthropics/skills",
-    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c"
+    "path": "skills/mcp-builder",
+    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c",
+    "lastUpdate": "2026-03-07 04:06:23",
+    "lastCommitId": "b0cbd3df1533b396d281a6886d5132f623393a9c"
   },
   "xlsx": {
     "repo": "https://github.com/anthropics/skills",
-    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c"
+    "path": "skills/xlsx",
+    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c",
+    "lastUpdate": "2026-03-07 04:06:23",
+    "lastCommitId": "b0cbd3df1533b396d281a6886d5132f623393a9c"
   },
   "code-simplifier": {
     "repo": "https://github.com/simonwong/agent-skills",
-    "commit": "667ea2ae7643de1e965b135ef38e2b502c39e462"
+    "path": "skills/code-simplifier",
+    "commit": "667ea2ae7643de1e965b135ef38e2b502c39e462",
+    "lastUpdate": "2026-01-18 22:11:24",
+    "lastCommitId": "667ea2ae7643de1e965b135ef38e2b502c39e462"
   },
   "chrome-devtools": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/chrome-devtools",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-agentsmd": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/create-agentsmd",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-readme": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/create-readme",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-specification": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/create-specification",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "create-technical-spike": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/create-technical-spike",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "editorconfig": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/editorconfig",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "excalidraw-diagram-generator": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/excalidraw-diagram-generator",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "git-commit": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/git-commit",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "refactor": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/refactor",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "sql-optimization": {
     "repo": "https://github.com/github/awesome-copilot",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "path": "skills/sql-optimization",
+    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
+    "lastUpdate": "2026-03-06 18:20:53",
+    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
   },
   "changelog-automation": {
     "repo": "https://github.com/wshobson/agents",
-    "commit": "a6f0f457c4e41cbb0ad329b691d28e255a829210"
+    "path": "plugins/documentation-generation/skills/changelog-automation",
+    "commit": "a6f0f457c4e41cbb0ad329b691d28e255a829210",
+    "lastUpdate": "2026-03-07 23:57:55",
+    "lastCommitId": "a6f0f457c4e41cbb0ad329b691d28e255a829210"
   },
   "read-github": {
     "repo": "https://github.com/am-will/codex-skills",
-    "commit": "c81091796fba691a18d851b6b435fdc9d4d3722f"
+    "path": "skills/read-github",
+    "commit": "c81091796fba691a18d851b6b435fdc9d4d3722f",
+    "lastUpdate": "2026-03-02 14:40:52",
+    "lastCommitId": "c81091796fba691a18d851b6b435fdc9d4d3722f"
   },
   "markdown-url": {
     "repo": "https://github.com/am-will/codex-skills",
-    "commit": "c81091796fba691a18d851b6b435fdc9d4d3722f"
+    "path": "skills/markdown-url",
+    "commit": "c81091796fba691a18d851b6b435fdc9d4d3722f",
+    "lastUpdate": "2026-03-02 14:40:52",
+    "lastCommitId": "c81091796fba691a18d851b6b435fdc9d4d3722f"
   },
   "agent-browser": {
     "repo": "https://github.com/vercel-labs/agent-browser",
-    "commit": "d9387aae58fbc778b5cacc43ba3d07256f0f9d07"
+    "path": "skills/agent-browser",
+    "commit": "d9387aae58fbc778b5cacc43ba3d07256f0f9d07",
+    "lastUpdate": "2026-03-07 14:41:56",
+    "lastCommitId": "d9387aae58fbc778b5cacc43ba3d07256f0f9d07"
   },
   "browser-use": {
     "repo": "https://github.com/browser-use/browser-use",
-    "commit": "9b103bb1d469e49cfcff9edd007c4ff16d8577e0"
+    "path": "skills/browser-use",
+    "commit": "9b103bb1d469e49cfcff9edd007c4ff16d8577e0",
+    "lastUpdate": "2026-03-08 08:36:14",
+    "lastCommitId": "9b103bb1d469e49cfcff9edd007c4ff16d8577e0"
   },
   "humanizer-zh": {
     "repo": "https://github.com/op7418/humanizer-zh",
-    "commit": "91f3d394db8419c20d67ebe22a96cf8fee0a404b"
+    "path": "./",
+    "commit": "91f3d394db8419c20d67ebe22a96cf8fee0a404b",
+    "lastUpdate": "2026-01-19 15:45:46",
+    "lastCommitId": "91f3d394db8419c20d67ebe22a96cf8fee0a404b"
   },
   "flutter-skills": {
     "repo": "https://github.com/flutter/skills",
-    "commit": "2260c1486ebd804f9fa8fc7f98c863cea4ffc76a"
+    "path": "./",
+    "commit": "2260c1486ebd804f9fa8fc7f98c863cea4ffc76a",
+    "lastUpdate": "2026-03-06 06:44:49",
+    "lastCommitId": "2260c1486ebd804f9fa8fc7f98c863cea4ffc76a"
+  },
+  "find-skills": {
+    "repo": "https://github.com/vercel-labs/skills",
+    "path": "skills/find-skills",
+    "commit": "7022ad39948c10024e451a56baba6fee62477df5",
+    "lastUpdate": "2026-03-05 16:45:42",
+    "lastCommitId": "7022ad39948c10024e451a56baba6fee62477df5"
+  },
+  "composition-patterns": {
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/composition-patterns",
+    "commit": "64bee5b7ea30702448e2aed774eb361914029944",
+    "lastUpdate": "2026-03-06 22:37:06",
+    "lastCommitId": "64bee5b7ea30702448e2aed774eb361914029944"
+  },
+  "react-best-practices": {
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/react-best-practices",
+    "commit": "64bee5b7ea30702448e2aed774eb361914029944",
+    "lastUpdate": "2026-03-06 22:37:06",
+    "lastCommitId": "64bee5b7ea30702448e2aed774eb361914029944"
+  },
+  "react-native-skills": {
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/react-native-skills",
+    "commit": "64bee5b7ea30702448e2aed774eb361914029944",
+    "lastUpdate": "2026-03-06 22:37:06",
+    "lastCommitId": "64bee5b7ea30702448e2aed774eb361914029944"
+  },
+  "web-design-guidelines": {
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/web-design-guidelines",
+    "commit": "64bee5b7ea30702448e2aed774eb361914029944",
+    "lastUpdate": "2026-03-06 22:37:06",
+    "lastCommitId": "64bee5b7ea30702448e2aed774eb361914029944"
+  },
+  "deploy-to-vercel": {
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/deploy-to-vercel",
+    "commit": "64bee5b7ea30702448e2aed774eb361914029944",
+    "lastUpdate": "2026-03-06 22:37:06",
+    "lastCommitId": "64bee5b7ea30702448e2aed774eb361914029944"
+  },
+  "turborepo": {
+    "repo": "https://github.com/vercel/turborepo",
+    "path": "skills/turborepo",
+    "commit": "9b0c199c06aed93ff40d3282e97247e912d06d1b",
+    "lastUpdate": "2026-03-08 12:12:13",
+    "lastCommitId": "9b0c199c06aed93ff40d3282e97247e912d06d1b"
+  },
+  "next-skills": {
+    "repo": "https://github.com/vercel-labs/next-skills",
+    "path": "./",
+    "commit": "038954e07bfc313e97fa5f6ff7caf87226e4a782",
+    "lastUpdate": "2026-02-17 02:06:19",
+    "lastCommitId": "038954e07bfc313e97fa5f6ff7caf87226e4a782"
+  },
+  "pnpm": {
+    "repo": "https://github.com/antfu/skills",
+    "path": "skills/pnpm",
+    "commit": "3fb90f01f5298b00de0a2500aab1ddd1357e6eb2",
+    "lastUpdate": "2026-02-03 14:26:01",
+    "lastCommitId": "3fb90f01f5298b00de0a2500aab1ddd1357e6eb2"
+  },
+  "vue-skills": {
+    "repo": "https://github.com/vuejs-ai/skills",
+    "path": "./",
+    "commit": "f3dd1bf4d3ac78331bdc903e4519d561c538ca6a",
+    "lastUpdate": "2026-02-11 01:37:56",
+    "lastCommitId": "f3dd1bf4d3ac78331bdc903e4519d561c538ca6a"
+  },
+  "vueuse-functions": {
+    "repo": "https://github.com/vueuse/skills",
+    "path": "skills/vueuse-functions",
+    "commit": "075b0d6d558cc5ca7d5ffe72a56b5fd92bbef2d1",
+    "lastUpdate": "2026-02-23 15:48:43",
+    "lastCommitId": "075b0d6d558cc5ca7d5ffe72a56b5fd92bbef2d1"
+  },
+  "vitest": {
+    "repo": "https://github.com/antfu/skills",
+    "path": "skills/vitest",
+    "commit": "3fb90f01f5298b00de0a2500aab1ddd1357e6eb2",
+    "lastUpdate": "2026-02-03 14:26:01",
+    "lastCommitId": "3fb90f01f5298b00de0a2500aab1ddd1357e6eb2"
+  },
+  "nuxt": {
+    "repo": "https://github.com/antfu/skills",
+    "path": "skills/nuxt",
+    "commit": "3fb90f01f5298b00de0a2500aab1ddd1357e6eb2",
+    "lastUpdate": "2026-02-03 14:26:01",
+    "lastCommitId": "3fb90f01f5298b00de0a2500aab1ddd1357e6eb2"
   }
 }

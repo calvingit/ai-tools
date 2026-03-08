@@ -93,6 +93,19 @@ ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 - [browser-use](https://github.com/browser-use/browser-use/tree/main/skills/browser-use)：浏览器自动化执行任务（需安装插件）
 - [humanizer-zh](https://github.com/op7418/humanizer-zh)：AI 写作去痕工具（中文版）
 - [flutter-skills](https://github.com/flutter/skills)：Flutter 开发技能集合
+- [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)：查找技能集合
+- [composition-patterns](https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns)：React 组合模式技能集合
+- [react-best-practices](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices)：React 最佳实践技能集合
+- [react-native-skills](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills)：React Native 开发技能集合
+- [web-design-guidelines](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines)：Web 设计 Guideline 技能集合
+- [deploy-to-vercel](https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel)：部署到 Vercel 技能集合
+- [turborepo](https://github.com/vercel/turborepo/tree/main/skills/turborepo)：Turborepo 开发技能集合
+- [next-skills](https://github.com/vercel-labs/next-skills)：Next.js 开发技能集合
+- [pnpm](https://github.com/antfu/skills/tree/main/skills/pnpm)：pnpm 开发技能集合
+- [vue-skills](https://github.com/vuejs-ai/skills)：Vue 开发技能集合
+- [vueuse-functions](https://github.com/vueuse/skills/tree/main/skills/vueuse-functions)：VueUse 开发技能集合
+- [vitest](https://github.com/antfu/skills/tree/main/skills/vitest)：Vitest 开发技能集合
+- [nuxt](https://github.com/antfu/skills/tree/main/skills/nuxt)：Nuxt.js 开发技能集合
 
 ### Superpowers
 
