@@ -4,6 +4,11 @@
       "name": "Tool",
       "items": [
         {
+          "id": "chrome-devtools",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/chrome-devtools",
+          "desc": "与 Chrome DevTools MCP 交互"
+        },
+        {
           "id": "skill-creator",
           "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
           "desc": "创建自定义技能"
@@ -17,16 +22,6 @@
           "id": "xlsx",
           "url": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
           "desc": "与 Excel 文件交互"
-        },
-        {
-          "id": "code-simplifier",
-          "url": "https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier",
-          "desc": "简化代码，提高可读性"
-        },
-        {
-          "id": "editorconfig",
-          "url": "https://github.com/github/awesome-copilot/tree/main/skills/editorconfig",
-          "desc": "生成符合最佳实践的 `.editorconfig`"
         },
         {
           "id": "git-commit",
@@ -59,14 +54,14 @@
           "desc": "浏览器自动化执行任务（需安装插件）"
         },
         {
-          "id": "humanizer-zh",
-          "url": "https://github.com/op7418/humanizer-zh",
-          "desc": "AI 写作去痕工具（中文版）"
-        },
-        {
           "id": "find-skills",
           "url": "https://github.com/vercel-labs/skills/tree/main/skills/find-skills",
           "desc": "查找技能集合"
+        },
+        {
+          "id": "excalidraw-diagram-generator",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/excalidraw-diagram-generator",
+          "desc": "基于描述生成 Excalidraw 图表"
         }
       ]
     },
@@ -97,6 +92,11 @@
           "id": "changelog-automation",
           "url": "https://github.com/wshobson/agents/tree/main/plugins/documentation-generation/skills/changelog-automation",
           "desc": "基于提交历史和标签自动生成变更日志"
+        },
+        {
+          "id": "editorconfig",
+          "url": "https://github.com/github/awesome-copilot/tree/main/skills/editorconfig",
+          "desc": "生成符合最佳实践的 `.editorconfig`"
         }
       ]
     },
@@ -122,12 +122,7 @@
           "id": "react-best-practices",
           "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
           "desc": "React 最佳实践技能集合"
-        }
-      ]
-    },
-    {
-      "name": "React Native",
-      "items": [
+        },
         {
           "id": "react-native-skills",
           "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills",
@@ -147,17 +142,17 @@
           "id": "vueuse-functions",
           "url": "https://github.com/vueuse/skills/tree/main/skills/vueuse-functions",
           "desc": "VueUse 开发技能集合"
+        },
+        {
+          "id": "vitest",
+          "url": "https://github.com/antfu/skills/tree/main/skills/vitest",
+          "desc": "Vitest 开发技能集合"
         }
       ]
     },
     {
       "name": "Web",
       "items": [
-        {
-          "id": "chrome-devtools",
-          "url": "https://github.com/github/awesome-copilot/tree/main/skills/chrome-devtools",
-          "desc": "与 Chrome DevTools MCP 交互"
-        },
         {
           "id": "next-skills",
           "url": "https://github.com/vercel-labs/next-skills",
@@ -201,12 +196,12 @@
       ]
     },
     {
-      "name": "Testing",
+      "name": "Coding",
       "items": [
         {
-          "id": "vitest",
-          "url": "https://github.com/antfu/skills/tree/main/skills/vitest",
-          "desc": "Vitest 开发技能集合"
+          "id": "code-simplifier",
+          "url": "https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier",
+          "desc": "简化代码，提高可读性"
         }
       ]
     },
@@ -214,14 +209,19 @@
       "name": "Design",
       "items": [
         {
-          "id": "excalidraw-diagram-generator",
-          "url": "https://github.com/github/awesome-copilot/tree/main/skills/excalidraw-diagram-generator",
-          "desc": "基于描述生成 Excalidraw 图表"
-        },
-        {
           "id": "web-design-guidelines",
           "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
           "desc": "Web 设计 Guideline 技能集合"
+        }
+      ]
+    },
+    {
+      "name": "Writing",
+      "items": [
+        {
+          "id": "humanizer-zh",
+          "url": "https://github.com/op7418/humanizer-zh",
+          "desc": "AI 写作去痕工具（中文版）"
         }
       ]
     }

@@ -72,25 +72,26 @@ ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 
 **技能列表**
 
-来源：`index.json`，可执行 `uv run python ./scripts/render_readme_skills.py` 生成。
+>
+> 来源：`index.json`，可执行 `uv run python ./scripts/render_readme_skills.py` 生成。
+>
 
-SKILLS_LIST_START
-（以下内容由 scripts/render_readme_skills.py 生成，请勿手改）
+<!-- SKILLS_LIST_START -->
+>（以下内容由 scripts/render_readme_skills.py 生成，请勿手改）
 
 #### Tool
+- [chrome-devtools](https://github.com/github/awesome-copilot/tree/main/skills/chrome-devtools)：与 Chrome DevTools MCP 交互
 - [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：创建自定义技能
 - [mcp-builder](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：构建自定义 MCP 技能
 - [xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx)：与 Excel 文件交互
-- [code-simplifier](https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier)：简化代码，提高可读性
-- [editorconfig](https://github.com/github/awesome-copilot/tree/main/skills/editorconfig)：生成符合最佳实践的 `.editorconfig`
 - [git-commit](https://github.com/github/awesome-copilot/tree/main/skills/git-commit)：基于 Conventional Commits 生成标准提交
 - [refactor](https://github.com/github/awesome-copilot/tree/main/skills/refactor)：在保持行为不变前提下重构代码
 - [read-github](https://github.com/am-will/codex-skills/tree/main/skills/read-github)：通过 gitmcp.io MCP 服务访问 GitHub 仓库文档和代码
 - [markdown-url](https://github.com/am-will/codex-skills/tree/main/skills/markdown-url)：在 URL 前添加前缀，通过 markdown.new 浏览网站
 - [agent-browser](https://github.com/vercel-labs/agent-browser/tree/main/skills/agent-browser)：浏览器自动化交互（需安装插件）
 - [browser-use](https://github.com/browser-use/browser-use/tree/main/skills/browser-use)：浏览器自动化执行任务（需安装插件）
-- [humanizer-zh](https://github.com/op7418/humanizer-zh)：AI 写作去痕工具（中文版）
 - [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)：查找技能集合
+- [excalidraw-diagram-generator](https://github.com/github/awesome-copilot/tree/main/skills/excalidraw-diagram-generator)：基于描述生成 Excalidraw 图表
 
 #### Documentation
 - [create-agentsmd](https://github.com/github/awesome-copilot/tree/main/skills/create-agentsmd)：创建 `AGENTS.md` 文件
@@ -98,6 +99,7 @@ SKILLS_LIST_START
 - [create-specification](https://github.com/github/awesome-copilot/tree/main/skills/create-specification)：创建规范文档（保存到 `spec/`，命名格式 `spec-[a-z0-9-]+.md`）
 - [create-technical-spike](https://github.com/github/awesome-copilot/tree/main/skills/create-technical-spike)：创建技术探索文档
 - [changelog-automation](https://github.com/wshobson/agents/tree/main/plugins/documentation-generation/skills/changelog-automation)：基于提交历史和标签自动生成变更日志
+- [editorconfig](https://github.com/github/awesome-copilot/tree/main/skills/editorconfig)：生成符合最佳实践的 `.editorconfig`
 
 #### Flutter
 - [flutter-skills](https://github.com/flutter/skills)：Flutter 开发技能集合
@@ -105,16 +107,14 @@ SKILLS_LIST_START
 #### React
 - [composition-patterns](https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns)：React 组合模式技能集合
 - [react-best-practices](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices)：React 最佳实践技能集合
-
-#### React Native
 - [react-native-skills](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills)：React Native 开发技能集合
 
 #### Vue
 - [vue-skills](https://github.com/vuejs-ai/skills)：Vue 开发技能集合
 - [vueuse-functions](https://github.com/vueuse/skills/tree/main/skills/vueuse-functions)：VueUse 开发技能集合
+- [vitest](https://github.com/antfu/skills/tree/main/skills/vitest)：Vitest 开发技能集合
 
 #### Web
-- [chrome-devtools](https://github.com/github/awesome-copilot/tree/main/skills/chrome-devtools)：与 Chrome DevTools MCP 交互
 - [next-skills](https://github.com/vercel-labs/next-skills)：Next.js 开发技能集合
 - [nuxt](https://github.com/antfu/skills/tree/main/skills/nuxt)：Nuxt.js 开发技能集合
 
@@ -126,13 +126,16 @@ SKILLS_LIST_START
 - [turborepo](https://github.com/vercel/turborepo/tree/main/skills/turborepo)：Turborepo 开发技能集合
 - [pnpm](https://github.com/antfu/skills/tree/main/skills/pnpm)：pnpm 开发技能集合
 
-#### Testing
-- [vitest](https://github.com/antfu/skills/tree/main/skills/vitest)：Vitest 开发技能集合
+#### Coding
+- [code-simplifier](https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier)：简化代码，提高可读性
 
 #### Design
-- [excalidraw-diagram-generator](https://github.com/github/awesome-copilot/tree/main/skills/excalidraw-diagram-generator)：基于描述生成 Excalidraw 图表
 - [web-design-guidelines](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines)：Web 设计 Guideline 技能集合
-SKILLS_LIST_END
+
+#### Writing
+- [humanizer-zh](https://github.com/op7418/humanizer-zh)：AI 写作去痕工具（中文版）
+
+<!-- SKILLS_LIST_END -->
 
 ### Superpowers
 

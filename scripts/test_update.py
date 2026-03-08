@@ -62,15 +62,16 @@ class UpdateScriptTests(unittest.TestCase):
             (source_repo / "assets").mkdir()
             (source_repo / "assets" / "template.txt").write_text("tpl", encoding="utf-8")
 
-            target_root = base_dir / "target-skills"
+            target_root = base_dir / "skills"
             with mock.patch.object(update, "TARGET_SKILLS_DIR", target_root):
                 update.copy_skill_to_target(
                     skill_name="humanizer-zh",
+                    category="Writing",
                     source_dir=source_repo / "SKILL.md",
                     repo_root=source_repo,
                 )
 
-            installed = target_root / "humanizer-zh"
+            installed = target_root / "Writing" / "humanizer-zh"
             self.assertTrue((installed / "SKILL.md").is_file())
             self.assertTrue((installed / "scripts" / "run.py").is_file())
             self.assertTrue((installed / "references" / "guide.md").is_file())

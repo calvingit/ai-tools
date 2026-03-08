@@ -176,9 +176,13 @@ def find_skill_source_dir(
     return None
 
 
-def copy_skill_to_target(skill_name: str, source_dir: Path, repo_root: Path) -> None:
+def copy_skill_to_target(
+    skill_name: str, category: str, source_dir: Path, repo_root: Path
+) -> None:
+    category_dir = TARGET_SKILLS_DIR / (category.strip() or "Uncategorized")
+    destination = category_dir / skill_name
+
     if source_dir.is_file() and source_dir.name == "SKILL.md":
-        destination = TARGET_SKILLS_DIR / skill_name
         if destination.exists():
             shutil.rmtree(destination)
         destination.mkdir(parents=True, exist_ok=True)
@@ -188,13 +192,6 @@ def copy_skill_to_target(skill_name: str, source_dir: Path, repo_root: Path) -> 
             if optional_dir.is_dir():
                 shutil.copytree(optional_dir, destination / optional_dir_name)
         return
-
-    is_skills_dir = source_dir.name == "skills"
-
-    if is_skills_dir:
-        destination = ROOT_DIR / skill_name
-    else:
-        destination = TARGET_SKILLS_DIR / skill_name
 
     if destination.exists():
         shutil.rmtree(destination)
@@ -248,8 +245,12 @@ def load_index_skills(path: Path) -> dict[str, dict[str, str]]:
                 continue
             name = str(item.get("id", "")).strip()
             url = str(item.get("url", "")).strip()
+            category_name = str(category.get("name", "")).strip()
             if not name or not url:
                 errors.append("技能索引格式错误: item.id 或 item.url 为空")
+                continue
+            if not category_name:
+                errors.append("技能索引格式错误: category.name 为空")
                 continue
             if name in skills:
                 errors.append(f"技能索引格式错误: 重复的技能 id {name}")
@@ -262,6 +263,7 @@ def load_index_skills(path: Path) -> dict[str, dict[str, str]]:
             skills[name] = {
                 "repo": parsed["repo_url"],
                 "path": parsed["path"],
+                "category": category_name,
                 "commit": "",
                 "lastUpdate": "",
                 "lastCommitId": "",
@@ -289,11 +291,13 @@ def load_existing_skills(path: Path) -> dict[str, dict[str, str]]:
         repo = str(item.get("repo", "")).strip()
         commit = str(item.get("commit", "")).strip()
         skill_path = str(item.get("path", "")).strip() or "./"
+        category = str(item.get("category", "")).strip()
         last_update = str(item.get("lastUpdate", "")).strip()
         last_commit_id = str(item.get("lastCommitId", "")).strip()
         normalized[name.strip()] = {
             "repo": repo,
             "path": skill_path,
+            "category": category,
             "commit": commit,
             "lastUpdate": last_update,
             "lastCommitId": last_commit_id,
@@ -310,6 +314,7 @@ def merge_skills(
         new_repo = str(new_item.get("repo", "")).strip()
         new_path = str(new_item.get("path", "")).strip() or "./"
         new_commit = str(new_item.get("commit", "")).strip()
+        new_category = str(new_item.get("category", "")).strip()
 
         old_item = existing.get(name, {})
         old_repo = str(old_item.get("repo", "")).strip() if isinstance(old_item, dict) else ""
@@ -318,7 +323,16 @@ def merge_skills(
             if isinstance(old_item, dict)
             else "./"
         )
-        old_commit = str(old_item.get("commit", "")).strip() if isinstance(old_item, dict) else ""
+        old_commit = (
+            str(old_item.get("commit", "")).strip()
+            if isinstance(old_item, dict)
+            else ""
+        )
+        old_category = (
+            str(old_item.get("category", "")).strip()
+            if isinstance(old_item, dict)
+            else ""
+        )
         old_last_update = (
             str(old_item.get("lastUpdate", "")).strip()
             if isinstance(old_item, dict)
@@ -346,6 +360,7 @@ def merge_skills(
         merged[name] = {
             "repo": new_repo,
             "path": new_path or old_path or "./",
+            "category": new_category or old_category,
             "commit": merged_commit,
             "lastUpdate": merged_last_update,
             "lastCommitId": merged_last_commit_id,
@@ -377,7 +392,8 @@ def install_skills(skills: dict[str, dict[str, str]]) -> None:
         if source_dir is None:
             raise RuntimeError(f"未找到 skill 目录或 SKILL.md: {skill_name} ({repo})")
 
-        copy_skill_to_target(skill_name, source_dir, repo_cached_dir[repo])
+        category = str(info.get("category", "")).strip()
+        copy_skill_to_target(skill_name, category, source_dir, repo_cached_dir[repo])
         last_commit_id, last_update = get_last_commit_for_path(
             repo_cached_dir[repo], skill_path
         )
