@@ -3,9 +3,9 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/chrome-devtools",
     "category": "Tool",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "skill-creator": {
     "repo": "https://github.com/anthropics/skills",
@@ -35,17 +35,17 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/git-commit",
     "category": "Tool",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "refactor": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/refactor",
     "category": "Tool",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "read-github": {
     "repo": "https://github.com/am-will/codex-skills",
@@ -67,9 +67,9 @@
     "repo": "https://github.com/vercel-labs/agent-browser",
     "path": "skills/agent-browser",
     "category": "Tool",
-    "commit": "d9387aae58fbc778b5cacc43ba3d07256f0f9d07",
-    "lastUpdate": "2026-03-07 14:41:56",
-    "lastCommitId": "d9387aae58fbc778b5cacc43ba3d07256f0f9d07"
+    "commit": "a0bd0c2f0fef0212530db55bd1b70e3212a97e6a",
+    "lastUpdate": "2026-03-09 06:41:40",
+    "lastCommitId": "a0bd0c2f0fef0212530db55bd1b70e3212a97e6a"
   },
   "browser-use": {
     "repo": "https://github.com/browser-use/browser-use",
@@ -91,41 +91,41 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/excalidraw-diagram-generator",
     "category": "Tool",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "create-agentsmd": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-agentsmd",
     "category": "Documentation",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "create-readme": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-readme",
     "category": "Documentation",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "create-specification": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-specification",
     "category": "Documentation",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "create-technical-spike": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-technical-spike",
     "category": "Documentation",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "changelog-automation": {
     "repo": "https://github.com/wshobson/agents",
@@ -139,9 +139,9 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/editorconfig",
     "category": "Documentation",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "flutter-skills": {
     "repo": "https://github.com/flutter/skills",
@@ -219,9 +219,9 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/sql-optimization",
     "category": "Backend",
-    "commit": "9ef54533f0e4e3f5f45d790d675af5f91344e821",
-    "lastUpdate": "2026-03-06 18:20:53",
-    "lastCommitId": "9ef54533f0e4e3f5f45d790d675af5f91344e821"
+    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
+    "lastUpdate": "2026-03-09 11:47:40",
+    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
   },
   "deploy-to-vercel": {
     "repo": "https://github.com/vercel-labs/agent-skills",
@@ -235,9 +235,9 @@
     "repo": "https://github.com/vercel/turborepo",
     "path": "skills/turborepo",
     "category": "DevOps",
-    "commit": "9b0c199c06aed93ff40d3282e97247e912d06d1b",
-    "lastUpdate": "2026-03-08 12:12:13",
-    "lastCommitId": "9b0c199c06aed93ff40d3282e97247e912d06d1b"
+    "commit": "03f97499841cde5ed1062265cfef96a6d180e5fd",
+    "lastUpdate": "2026-03-09 11:19:56",
+    "lastCommitId": "03f97499841cde5ed1062265cfef96a6d180e5fd"
   },
   "pnpm": {
     "repo": "https://github.com/antfu/skills",
