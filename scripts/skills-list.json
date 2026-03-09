@@ -3,9 +3,9 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/chrome-devtools",
     "category": "Tool",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "skill-creator": {
     "repo": "https://github.com/anthropics/skills",
@@ -35,17 +35,17 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/git-commit",
     "category": "Tool",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "refactor": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/refactor",
     "category": "Tool",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "read-github": {
     "repo": "https://github.com/am-will/codex-skills",
@@ -75,9 +75,9 @@
     "repo": "https://github.com/browser-use/browser-use",
     "path": "skills/browser-use",
     "category": "Tool",
-    "commit": "9b103bb1d469e49cfcff9edd007c4ff16d8577e0",
-    "lastUpdate": "2026-03-08 08:36:14",
-    "lastCommitId": "9b103bb1d469e49cfcff9edd007c4ff16d8577e0"
+    "commit": "028c2868cf958634828280be0a0727cee4084174",
+    "lastUpdate": "2026-03-09 14:49:20",
+    "lastCommitId": "028c2868cf958634828280be0a0727cee4084174"
   },
   "find-skills": {
     "repo": "https://github.com/vercel-labs/skills",
@@ -91,41 +91,41 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/excalidraw-diagram-generator",
     "category": "Tool",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "create-agentsmd": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-agentsmd",
     "category": "Documentation",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "create-readme": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-readme",
     "category": "Documentation",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "create-specification": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-specification",
     "category": "Documentation",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "create-technical-spike": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/create-technical-spike",
     "category": "Documentation",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "changelog-automation": {
     "repo": "https://github.com/wshobson/agents",
@@ -139,9 +139,9 @@
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/editorconfig",
     "category": "Documentation",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "flutter-skills": {
     "repo": "https://github.com/flutter/skills",
@@ -215,13 +215,21 @@
     "lastUpdate": "2026-02-03 14:26:01",
     "lastCommitId": "3fb90f01f5298b00de0a2500aab1ddd1357e6eb2"
   },
+  "webapp-testing": {
+    "repo": "https://github.com/anthropics/skills",
+    "path": "skills/webapp-testing",
+    "category": "Web",
+    "commit": "b0cbd3df1533b396d281a6886d5132f623393a9c",
+    "lastUpdate": "2026-03-07 04:06:23",
+    "lastCommitId": "b0cbd3df1533b396d281a6886d5132f623393a9c"
+  },
   "sql-optimization": {
     "repo": "https://github.com/github/awesome-copilot",
     "path": "skills/sql-optimization",
     "category": "Backend",
-    "commit": "1de9e2090a41258686ad2ef6a052bfbe1436d596",
-    "lastUpdate": "2026-03-09 11:47:40",
-    "lastCommitId": "1de9e2090a41258686ad2ef6a052bfbe1436d596"
+    "commit": "c41cc5cb38369a4436e9f860a0b32857dc5355c4",
+    "lastUpdate": "2026-03-09 14:01:51",
+    "lastCommitId": "c41cc5cb38369a4436e9f860a0b32857dc5355c4"
   },
   "deploy-to-vercel": {
     "repo": "https://github.com/vercel-labs/agent-skills",
@@ -235,9 +243,9 @@
     "repo": "https://github.com/vercel/turborepo",
     "path": "skills/turborepo",
     "category": "DevOps",
-    "commit": "03f97499841cde5ed1062265cfef96a6d180e5fd",
-    "lastUpdate": "2026-03-09 11:19:56",
-    "lastCommitId": "03f97499841cde5ed1062265cfef96a6d180e5fd"
+    "commit": "a9bbb9ec710522ea25e2d9e40308c55c5a641498",
+    "lastUpdate": "2026-03-09 12:16:21",
+    "lastCommitId": "a9bbb9ec710522ea25e2d9e40308c55c5a641498"
   },
   "pnpm": {
     "repo": "https://github.com/antfu/skills",
@@ -254,6 +262,14 @@
     "commit": "667ea2ae7643de1e965b135ef38e2b502c39e462",
     "lastUpdate": "2026-01-18 22:11:24",
     "lastCommitId": "667ea2ae7643de1e965b135ef38e2b502c39e462"
+  },
+  "code-review-expert": {
+    "repo": "https://github.com/sanyuan0704/sanyuan-skills",
+    "path": "skills/code-review-expert",
+    "category": "Coding",
+    "commit": "4d83e4a7060d662914716799abf0b246f5f666a4",
+    "lastUpdate": "2026-03-02 21:30:42",
+    "lastCommitId": "4d83e4a7060d662914716799abf0b246f5f666a4"
   },
   "web-design-guidelines": {
     "repo": "https://github.com/vercel-labs/agent-skills",

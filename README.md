@@ -116,6 +116,7 @@ python3 ./scripts/install.py --category all
 
 - [next-skills](https://github.com/vercel-labs/next-skills)：Next.js 开发技能集合
 - [nuxt](https://github.com/antfu/skills/tree/main/skills/nuxt)：Nuxt.js 开发技能集合
+- [webapp-testing](https://github.com/anthropics/skills/tree/main/skills/webapp-testing)：Web 应用测试技能集合
 
 ### Backend
 
@@ -130,6 +131,7 @@ python3 ./scripts/install.py --category all
 ### Coding
 
 - [code-simplifier](https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier)：简化代码，提高可读性
+- [code-review-expert](https://github.com/sanyuan0704/sanyuan-skills/tree/main/skills/code-review-expert)：代码审核专家技能集合
 
 ### Design
 
