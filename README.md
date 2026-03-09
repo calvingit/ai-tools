@@ -55,20 +55,21 @@ ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 **安装到 AI 助手**
 
 ```bash
-# 1. 默认安装 (安装 ./skills 目录下的标准技能)
-./scripts/install.sh
+# 1. 交互式安装（选择分类或全部）
+python3 ./scripts/install.py
 
-# 2. 安装指定技能包 (例如 ./flutter-skills)
-./scripts/install.sh flutter-skills
+# 2. 安装指定分类
+python3 ./scripts/install.py --category Tool
 
-# 3. 安装所有技能 (./skills 及所有 *-skills 目录)
-./scripts/install.sh all
+# 3. 安装指定分类下的单个单元（单 skill 或组合包）
+python3 ./scripts/install.py --category Web --unit next-skills
+
+# 4. 安装全部分类
+python3 ./scripts/install.py --category all
 ```
 
-默认安装位置：
-
-- 源文件：`~/.agents/skills`
-- 软链接：`~/.claude/skills` (供 Claude 使用)
+安装命令会统一封装 `npx skills add`，并默认附带 `-y`（无需确认）。
+可透传 `-g`（全局安装）和 `-a <agent>`（指定 Agent）。
 
 **技能列表**
 
