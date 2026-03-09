@@ -162,6 +162,11 @@
           "id": "nuxt",
           "url": "https://github.com/antfu/skills/tree/main/skills/nuxt",
           "desc": "Nuxt.js 开发技能集合"
+        },
+        {
+          "id": "webapp-testing",
+          "url": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+          "desc": "Web 应用测试技能集合"
         }
       ]
     },
@@ -202,6 +207,11 @@
           "id": "code-simplifier",
           "url": "https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier",
           "desc": "简化代码，提高可读性"
+        },
+        {
+          "id": "code-review-expert",
+          "url": "https://github.com/sanyuan0704/sanyuan-skills/tree/main/skills/code-review-expert",
+          "desc": "代码审核专家技能集合"
         }
       ]
     },

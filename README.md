@@ -43,12 +43,6 @@ ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 
 ## Skills
 
-### 我的 Skills
-
-- `lint-agents-md`：评估 `AGENTS.md` 质量，并自动检测常见设计错误与重写建议
-
-### 开源 Skills
-
 - 首次使用执行 `uv sync` 初始化 Python 环境
 - 使用 `uv run python ./scripts/update.py` 下载并更新技能到本地（支持自动识别 Skills 目录与技能组合包）
 
@@ -73,14 +67,13 @@ python3 ./scripts/install.py --category all
 
 **技能列表**
 
->
 > 来源：`index.json`，可执行 `uv run python ./scripts/render_readme_skills.py` 生成。
->
 
 <!-- SKILLS_LIST_START -->
 >（以下内容由 scripts/render_readme_skills.py 生成，请勿手改）
 
-#### Tool
+### Tool
+
 - [chrome-devtools](https://github.com/github/awesome-copilot/tree/main/skills/chrome-devtools)：与 Chrome DevTools MCP 交互
 - [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator)：创建自定义技能
 - [mcp-builder](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)：构建自定义 MCP 技能
@@ -94,7 +87,8 @@ python3 ./scripts/install.py --category all
 - [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)：查找技能集合
 - [excalidraw-diagram-generator](https://github.com/github/awesome-copilot/tree/main/skills/excalidraw-diagram-generator)：基于描述生成 Excalidraw 图表
 
-#### Documentation
+### Documentation
+
 - [create-agentsmd](https://github.com/github/awesome-copilot/tree/main/skills/create-agentsmd)：创建 `AGENTS.md` 文件
 - [create-readme](https://github.com/github/awesome-copilot/tree/main/skills/create-readme)：创建 `README.md` 文件
 - [create-specification](https://github.com/github/awesome-copilot/tree/main/skills/create-specification)：创建规范文档（保存到 `spec/`，命名格式 `spec-[a-z0-9-]+.md`）
@@ -102,40 +96,48 @@ python3 ./scripts/install.py --category all
 - [changelog-automation](https://github.com/wshobson/agents/tree/main/plugins/documentation-generation/skills/changelog-automation)：基于提交历史和标签自动生成变更日志
 - [editorconfig](https://github.com/github/awesome-copilot/tree/main/skills/editorconfig)：生成符合最佳实践的 `.editorconfig`
 
-#### Flutter
+### Flutter
+
 - [flutter-skills](https://github.com/flutter/skills)：Flutter 开发技能集合
 
-#### React
+### React
+
 - [composition-patterns](https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns)：React 组合模式技能集合
 - [react-best-practices](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices)：React 最佳实践技能集合
 - [react-native-skills](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills)：React Native 开发技能集合
 
-#### Vue
+### Vue
+
 - [vue-skills](https://github.com/vuejs-ai/skills)：Vue 开发技能集合
 - [vueuse-functions](https://github.com/vueuse/skills/tree/main/skills/vueuse-functions)：VueUse 开发技能集合
 - [vitest](https://github.com/antfu/skills/tree/main/skills/vitest)：Vitest 开发技能集合
 
-#### Web
+### Web
+
 - [next-skills](https://github.com/vercel-labs/next-skills)：Next.js 开发技能集合
 - [nuxt](https://github.com/antfu/skills/tree/main/skills/nuxt)：Nuxt.js 开发技能集合
 
-#### Backend
+### Backend
+
 - [sql-optimization](https://github.com/github/awesome-copilot/tree/main/skills/sql-optimization)：优化 SQL 查询性能
 
-#### DevOps
+### DevOps
+
 - [deploy-to-vercel](https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel)：部署到 Vercel 技能集合
 - [turborepo](https://github.com/vercel/turborepo/tree/main/skills/turborepo)：Turborepo 开发技能集合
 - [pnpm](https://github.com/antfu/skills/tree/main/skills/pnpm)：pnpm 开发技能集合
 
-#### Coding
+### Coding
+
 - [code-simplifier](https://github.com/simonwong/agent-skills/tree/main/skills/code-simplifier)：简化代码，提高可读性
 
-#### Design
+### Design
+
 - [web-design-guidelines](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines)：Web 设计 Guideline 技能集合
 
-#### Writing
-- [humanizer-zh](https://github.com/op7418/humanizer-zh)：AI 写作去痕工具（中文版）
+### Writing
 
+- [humanizer-zh](https://github.com/op7418/humanizer-zh)：AI 写作去痕工具（中文版）
 <!-- SKILLS_LIST_END -->
 
 ### Superpowers
