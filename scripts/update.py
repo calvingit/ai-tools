@@ -13,7 +13,7 @@ from zoneinfo import ZoneInfo
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 INDEX_PATH = ROOT_DIR / "index.json"
-OUTPUT_PATH = ROOT_DIR / "scripts" / "skills-list.json"
+OUTPUT_PATH = ROOT_DIR / ".skills-lock.json"
 CACHE_DIR = ROOT_DIR / ".cache"
 TARGET_SKILLS_DIR = ROOT_DIR / "skills"
 LOGGER = logging.getLogger("skills-updater")
@@ -84,8 +84,13 @@ def ensure_repo_cached(repo_url: str) -> Path:
     if cache_repo_dir.exists() and any(cache_repo_dir.iterdir()):
         if (cache_repo_dir / ".git").is_dir():
             LOGGER.info("检测到缓存仓库，执行拉取: %s", cache_repo_dir.name)
-            run_command(["git", "-C", str(cache_repo_dir), "fetch", "--all", "--prune"])
-            run_command(["git", "-C", str(cache_repo_dir), "pull", "--ff-only"])
+            try:
+                run_command(["git", "-C", str(cache_repo_dir), "fetch", "--all", "--prune"])
+                run_command(["git", "-C", str(cache_repo_dir), "pull", "--ff-only"])
+            except RuntimeError:
+                LOGGER.warning("缓存仓库无法快进，重新克隆: %s", cache_repo_dir.name)
+                shutil.rmtree(cache_repo_dir)
+                return clone_repo_to_cache(repo_url, cache_repo_dir)
         else:
             LOGGER.info("检测到非空缓存目录，跳过下载: %s", cache_repo_dir.name)
         return cache_repo_dir
@@ -93,6 +98,10 @@ def ensure_repo_cached(repo_url: str) -> Path:
     if cache_repo_dir.exists() and not any(cache_repo_dir.iterdir()):
         cache_repo_dir.rmdir()
 
+    return clone_repo_to_cache(repo_url, cache_repo_dir)
+
+
+def clone_repo_to_cache(repo_url: str, cache_repo_dir: Path) -> Path:
     with tempfile.TemporaryDirectory(
         prefix=f"{cache_repo_dir.name}-tmp-",
         dir=CACHE_DIR,
@@ -368,9 +377,29 @@ def merge_skills(
     return merged
 
 
-def install_skills(skills: dict[str, dict[str, str]]) -> None:
+def build_repo_commit_map(skills: dict[str, dict[str, str]]) -> dict[str, str]:
+    repo_commits: dict[str, str] = {}
+    for info in skills.values():
+        repo = str(info.get("repo", "")).strip()
+        commit = str(info.get("commit", "")).strip()
+        if not repo or not commit:
+            continue
+        current = repo_commits.get(repo)
+        if current is None:
+            repo_commits[repo] = commit
+        elif current != commit:
+            repo_commits[repo] = ""
+    return repo_commits
+
+
+def install_skills(
+    skills: dict[str, dict[str, str]],
+    existing_skills: dict[str, dict[str, str]],
+) -> None:
     repo_latest_commit: dict[str, str] = {}
     repo_cached_dir: dict[str, Path] = {}
+    repo_changed: dict[str, bool] = {}
+    previous_repo_commits = build_repo_commit_map(existing_skills)
 
     for info in skills.values():
         repo = info["repo"]
@@ -378,6 +407,12 @@ def install_skills(skills: dict[str, dict[str, str]]) -> None:
             continue
         repo_cached_dir[repo] = ensure_repo_cached(repo)
         repo_latest_commit[repo] = get_repo_head_commit(repo_cached_dir[repo])
+        previous_commit = previous_repo_commits.get(repo, "")
+        repo_changed[repo] = repo_latest_commit[repo] != previous_commit
+        if repo_changed[repo]:
+            LOGGER.info("仓库有更新，执行技能同步: %s", repo)
+        else:
+            LOGGER.info("仓库无更新，跳过复制: %s", repo)
 
     for skill_name, info in skills.items():
         repo = info["repo"]
@@ -385,6 +420,22 @@ def install_skills(skills: dict[str, dict[str, str]]) -> None:
         skill_path = str(info.get("path", "")).strip() or "./"
 
         info["commit"] = latest_commit
+        old_info = existing_skills.get(skill_name, {})
+        old_last_commit_id = (
+            str(old_info.get("lastCommitId", "")).strip()
+            if isinstance(old_info, dict)
+            else ""
+        )
+        old_last_update = (
+            str(old_info.get("lastUpdate", "")).strip()
+            if isinstance(old_info, dict)
+            else ""
+        )
+
+        if not repo_changed[repo]:
+            info["lastCommitId"] = old_last_commit_id
+            info["lastUpdate"] = old_last_update
+            continue
 
         source_dir = find_skill_source_dir(
             repo_cached_dir[repo], skill_name, skill_path
@@ -414,7 +465,7 @@ def main() -> None:
             build_cache_dir_name(info["repo"]) for info in skills.values()
         }
         cleanup_cache_dirs(valid_cache_names)
-        install_skills(skills)
+        install_skills(skills, existing_skills)
         OUTPUT_PATH.write_text(
             json.dumps(skills, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",

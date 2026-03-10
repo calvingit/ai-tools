@@ -45,6 +45,7 @@ ln -s ~/.agents/AGENTS.md ~/.codex/AGENTS.md
 
 - 首次使用执行 `uv sync` 初始化 Python 环境
 - 使用 `uv run python ./scripts/update.py` 下载并更新技能到本地（支持自动识别 Skills 目录与技能组合包）
+- 更新脚本会在项目根目录生成本地锁文件 `.skills-lock.json`（已加入 `.gitignore`）
 
 **安装到 AI 助手**
 

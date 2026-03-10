@@ -61,4 +61,4 @@ venv.bak/
 # IDE / editor
 .idea/
 .vscode/
-
+.skills-lock.json
