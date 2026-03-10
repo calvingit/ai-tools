@@ -12,6 +12,14 @@ import install
 
 
 class InstallScriptTests(unittest.TestCase):
+    def test_normalize_agents_supports_comma_values(self) -> None:
+        agents = install.normalize_agents(["claude-code, codex, trae"])
+        self.assertEqual(agents, ["claude-code", "codex", "trae"])
+
+    def test_normalize_agents_supports_mixed_flags(self) -> None:
+        agents = install.normalize_agents(["claude-code,codex", "trae"])
+        self.assertEqual(agents, ["claude-code", "codex", "trae"])
+
     def test_load_categories_from_index(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

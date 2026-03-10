@@ -239,6 +239,16 @@ def normalize_inputs(args: argparse.Namespace) -> tuple[str | None, list[str]]:
     return category, units
 
 
+def normalize_agents(raw_agents: list[str]) -> list[str]:
+    normalized: list[str] = []
+    for raw in raw_agents:
+        for item in raw.split(","):
+            agent = item.strip()
+            if agent:
+                normalized.append(agent)
+    return normalized
+
+
 def interactive_select(categories: list[str]) -> tuple[str, list[str]]:
     category = ask_choice("请选择要安装的分类", ["all", *categories])
     if category == "all":
@@ -257,6 +267,7 @@ def main(argv: list[str]) -> int:
     categories = load_categories(ROOT)
 
     category, units = normalize_inputs(args)
+    agents = normalize_agents(list(args.agent))
     if category is None:
         category, units = interactive_select(categories)
 
@@ -267,7 +278,7 @@ def main(argv: list[str]) -> int:
         category=category,
         units=units,
         global_install=args.global_install,
-        agents=list(args.agent),
+        agents=agents,
     )
     execute_plan(plan)
     print("[INFO] 安装完成")
